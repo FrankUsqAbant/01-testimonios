@@ -1,23 +1,26 @@
-import "../hojas-de-estilo/Testimonio.css";
+import "./Testimonio.css";
 
-function Testimonio(props) {
+function Testimonio({ nombre, pais, imagen, cargo, empresa, testimonio }) {
   return (
-    <div className="contenedor-testimonio">
+    <article className="testimonio">
       <img
-        className="imagen-testimonio"
-        src={`/imagenes/testimonio-${props.imagen}.png`}
-        alt={`Foto de ${props.nombre}`}
+        className="testimonio-img"
+        src={`${import.meta.env.BASE_URL}imagenes/testimonio-${imagen}.png`}
+        alt={`Foto de ${nombre}`}
+        loading="lazy"
+        width="120"
+        height="120"
       />
-      <div className="contenedor-texto-testimonio">
-        <p className="nombre-testimonio">
-          <strong>{props.nombre}</strong> en <strong>{props.pais}</strong>
+      <div className="testimonio-text">
+        <p className="testimonio-nombre">
+          {nombre} · <span>{pais}</span>
         </p>
-        <p className="cargo-testimonio">
-          {props.cargo} en <strong>{props.empresa}</strong>
+        <p className="testimonio-cargo">
+          {cargo} en {empresa}
         </p>
-        <p className="texto-testimonio">"{props.testimonio}"</p>
+        <blockquote className="testimonio-quote">&ldquo;{testimonio}&rdquo;</blockquote>
       </div>
-    </div>
+    </article>
   );
 }
 
