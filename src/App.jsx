@@ -1,79 +1,73 @@
+import "./App.css";
+
 const testimonios = [
   {
-    id: "shawn",
     nombre: "Shawn Wang",
     pais: "Singapur",
     imagen: "shawn",
     cargo: "Ingeniero de Software",
     empresa: "Amazon",
-    testimonio: (
-      <>
-        &ldquo;<strong>Da miedo cambiar de carrera.</strong> Solo gané la confianza de que podía programar trabajando a través de cientos de horas de lecciones gratuitas. En un año tuve un trabajo de seis cifras como ingeniero de software. freeCodeCamp cambió mi vida.&rdquo;
-      </>
-    ),
+    testimonio:
+      "Da miedo cambiar de carrera. Solo gané la confianza de que podía programar trabajando a través de cientos de horas de lecciones gratuitas. En un año tuve un trabajo de seis cifras como ingeniero de software.",
   },
   {
-    id: "sarah",
     nombre: "Sarah Chima",
     pais: "Nigeria",
     imagen: "sarah",
     cargo: "Ingeniera de Software",
-    empresa: "ChatDesk",
-    testimonio: (
-      <>
-        &ldquo;<strong>freeCodeCamp fue la puerta de entrada a mi carrera</strong> como desarrolladora de software. El plan de estudios bien estructurado llevó mis conocimientos de programación de principiante total a un nivel muy seguro.&rdquo;
-      </>
-    ),
+    empresa: "Amazon",
+    testimonio:
+      "La puerta de entrada a mi carrera como desarrolladora. El plan de estudios bien estructurado llevó mis conocimientos de programación de principiante total a un nivel muy seguro.",
   },
   {
-    id: "emma",
     nombre: "Emma Bostian",
     pais: "Suecia",
     imagen: "emma",
     cargo: "Ingeniera de Software",
     empresa: "Spotify",
-    testimonio: (
-      <>
-        &ldquo;Siempre tuve problemas para aprender JavaScript. He tomado muchos cursos, pero el de freeCodeCamp fue el que se quedó. <strong>Estudiar estructuras de datos y algoritmos me dio las habilidades</strong> y la confianza para conseguir el trabajo de mis sueños.&rdquo;
-      </>
-    ),
+    testimonio:
+      "Siempre tuve problemas para aprender JavaScript. El curso fue el que se quedó. Estudiar estructuras de datos y algoritmos me dio las habilidades y la confianza para conseguir el trabajo de mis sueños.",
   },
 ];
 
 function Testimonio({ nombre, pais, imagen, cargo, empresa, testimonio }) {
   return (
-    <div className="contenedor-testimonio">
+    <article className="testimonio">
       <img
-        className="imagen-testimonio"
+        className="testimonio-img"
         src={`${import.meta.env.BASE_URL}imagenes/testimonio-${imagen}.webp`}
         alt={`Foto de ${nombre}`}
         loading="lazy"
         decoding="async"
-        width="220"
-        height="220"
+        width="96"
+        height="96"
       />
-      <div className="contenedor-texto-testimonio">
-        <p className="nombre-testimonio">
-          <strong>{nombre}</strong> en {pais}
+      <div className="testimonio-text">
+        <p className="testimonio-nombre">
+          {nombre} · <span>{pais}</span>
         </p>
-        <p className="cargo-testimonio">
-          {cargo} en <strong>{empresa}</strong>
+        <p className="testimonio-cargo">
+          {cargo} en {empresa}
         </p>
-        <p className="texto-testimonio">{testimonio}</p>
+        <blockquote className="testimonio-quote">&ldquo;{testimonio}&rdquo;</blockquote>
       </div>
-    </div>
+    </article>
   );
 }
 
 export default function App() {
   return (
-    <main className="contenedor-principal">
-      <h1 className="titulo-principal">
-        Esto es lo que dicen nuestros alumnos sobre freeCodeCamp:
-      </h1>
-      {testimonios.map((t) => (
-        <Testimonio key={t.id} {...t} />
-      ))}
-    </main>
+    <div className="app">
+      <header className="header">
+        <h1>Testimonios</h1>
+        <p>Lo que dicen quienes transformaron su carrera con la programación.</p>
+      </header>
+
+      <main className="testimonios">
+        {testimonios.map((t) => (
+          <Testimonio key={t.nombre} {...t} />
+        ))}
+      </main>
+    </div>
   );
 }

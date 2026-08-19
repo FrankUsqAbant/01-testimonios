@@ -1,50 +1,65 @@
-# Clon de Testimonios - freeCodeCamp
+<div align="center">
+  <br>
+  <img src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=34&duration=1800&pause=800&color=C6A962&center=true&vCenter=true&width=600&lines=Testimonios;React+%2B+Vite" alt="Testimonios" />
+  <br><br>
 
-[![Demo en vivo](https://img.shields.io/badge/Demo-Ver%20Sitio%20en%20Vivo-2563eb?style=for-the-badge&logo=githubpages&logoColor=white)](https://frankusqabant.github.io/01-testimonios/)
-[![React](https://img.shields.io/badge/React-18-blue?style=flat-square&logo=react)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-6-purple?style=flat-square&logo=vite)](https://vitejs.dev/)
-
-Mini aplicación desarrollada en React y Vite basada en el ejercicio práctico de freeCodeCamp. Implementa componentes funcionales, renderizado dinámico con `.map()`, imágenes optimizadas en WebP y diseño responsive.
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <a href="https://frankusqabant.github.io/01-testimonios/">
+    <img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-2A8C5A?style=for-the-badge&logo=github&logoColor=white" alt="Ver Demo" />
+  </a>
+  <br><br>
+</div>
 
 ---
 
-### 🚀 Despliegue
+## 💬 Testimonios
 
-El proyecto se despliega automáticamente en GitHub Pages mediante GitHub Actions:  
-👉 **[frankusqabant.github.io/01-testimonios](https://frankusqabant.github.io/01-testimonios/)**
+Ejercicio de React que demuestra el renderizado de listas con `map`, el paso de props, imágenes optimizadas en WebP y diseño moderno con glassmorphism.
+
+### 🚀 Demo en Vivo
+
+👉 **[Ver demo en GitHub Pages](https://frankusqabant.github.io/01-testimonios/)**
 
 ---
 
 <details>
-<summary><b>🛠️ Cómo ejecutar en local</b></summary>
+<summary><b>✨ Características</b></summary>
+
+- **Renderizado declarativo** — Lista generada dinámicamente con `.map()`
+- **Imágenes en WebP** — Carga rápida con `loading="lazy"` y formato `.webp` optimizado
+- **Accesibilidad** — Marcado semántico (`<article>`, `<blockquote>`) y textos alternativos
+- **Diseño moderno** — Glassmorphism, paleta oscura y tipografía Syne + DM Sans
+- **Responsive** — Adaptable a móviles y pantallas de escritorio
+
+</details>
+
+<details>
+<summary><b>🛠️ Instalación y ejecución local</b></summary>
 
 ```bash
-# Instalar dependencias
 npm install
-
-# Iniciar servidor de desarrollo
-npm run dev
-
-# Compilar para producción
-npm run build
+npm run dev     # Servidor local de desarrollo
+npm run build   # Compilar para producción
 ```
+
 </details>
 
 <details>
-<summary><b>📁 Estructura del proyecto</b></summary>
+<summary><b>📂 Estructura</b></summary>
 
 ```text
-01-testimonios/
-├── public/imagenes/   # Fotos en formato .webp optimizado
-├── src/
-│   ├── App.jsx        # Componente principal y datos
-│   ├── index.css      # Estilos globales y responsive
-│   └── main.jsx       # Montaje en el DOM
-├── index.html
-└── vite.config.js
+src/
+├── App.jsx        # Lógica, datos y componente Testimonio
+├── App.css        # Estilos y animaciones de testimonios
+├── index.css      # Estilos globales y fondo
+└── main.jsx       # Punto de entrada de React
 ```
+
 </details>
 
 ---
 
-Desarrollado por **Frank Abanto** · Proyecto de práctica frontend
+<div align="center">
+  <sub>Ejercicio de freeCodeCamp mejorado · © 2026 Frank Abanto</sub>
+</div>
