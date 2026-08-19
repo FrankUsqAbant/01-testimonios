@@ -1,20 +1,57 @@
 :root {
-  font-family: "DM Sans", Inter, system-ui, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Syne", sans-serif;
+
+  --bg-primary: #090908;
+  --bg-card: rgba(26, 26, 24, 0.65);
+  --bg-card-hover: rgba(35, 35, 32, 0.85);
+
+  --accent-gold: #e2c074;
+  --accent-gold-glow: rgba(226, 192, 116, 0.18);
+  --accent-blue: #38bdf8;
+
+  --text-primary: #f5f2ee;
+  --text-secondary: #9c978f;
+  --text-muted: #6b6760;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(226, 192, 116, 0.4);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 20px 40px -15px rgba(226, 192, 116, 0.12);
+
   color-scheme: dark;
-  color: #d4cfc8;
-  background-color: #0a0a09;
-  -webkit-font-smoothing: antialiased;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   min-height: 100vh;
-  background: radial-gradient(ellipse at 50% 0%, rgba(198, 169, 98, 0.05), transparent 60%), #0a0a09;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(226, 192, 116, 0.12), transparent),
+    radial-gradient(circle 600px at 80% 80%, rgba(56, 189, 248, 0.05), transparent);
+  background-attachment: fixed;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
