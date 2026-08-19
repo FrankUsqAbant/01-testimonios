@@ -1,75 +1,50 @@
-<div align="center">
-  <br>
-  <img src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=34&duration=1800&pause=800&color=C6A962&center=true&vCenter=true&width=600&lines=Testimonios;React+%2B+Vite;Im%C3%A1genes+WebP+Optimizadas" alt="Testimonios" />
-  <br><br>
+# Clon de Testimonios - freeCodeCamp
 
-  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-  <img src="https://img.shields.io/badge/WebP-Optimized-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-2A8C5A?style=for-the-badge&logo=github&logoColor=white" />
-  <br><br>
-</div>
+[![Demo en vivo](https://img.shields.io/badge/Demo-Ver%20Sitio%20en%20Vivo-2563eb?style=for-the-badge&logo=githubpages&logoColor=white)](https://frankusqabant.github.io/01-testimonios/)
+[![React](https://img.shields.io/badge/React-18-blue?style=flat-square&logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-6-purple?style=flat-square&logo=vite)](https://vitejs.dev/)
+
+Mini aplicación desarrollada en React y Vite basada en el ejercicio práctico de freeCodeCamp. Implementa componentes funcionales, renderizado dinámico con `.map()`, imágenes optimizadas en WebP y diseño responsive.
 
 ---
 
-## 💬 Testimonios
+### 🚀 Despliegue
 
-Aplicación interactiva y moderna construida en React + Vite, diseñada con foco en rendimiento, seguridad, accesibilidad y máxima optimización de recursos.
+El proyecto se despliega automáticamente en GitHub Pages mediante GitHub Actions:  
+👉 **[frankusqabant.github.io/01-testimonios](https://frankusqabant.github.io/01-testimonios/)**
 
-### ✨ Características Clave
+---
 
-- **Separación Limpia de Datos y Vista:** Los testimonios se gestionan de forma desacoplada en `src/data/testimonios.js`.
-- **Rendimiento & Optimización de Carga:** Imágenes convertidas a formato `.webp` de ultra-bajo peso (~65% de reducción de tamaño), con carga diferida (`loading="lazy"`) y decodificación asíncrona (`decoding="async"`).
-- **Filtrado Interactivo:** Permite filtrar testimonios por empresa de manera instantánea y fluida.
-- **Accesibilidad & HTML Semántico:** Marcado semántico completo (`<article>`, `<figure>`, `<blockquote>`, `<figcaption>`, `aria-*`).
-- **Despliegue Continuo (CI/CD):** Configurado con GitHub Actions para despliegue automático en GitHub Pages respetando la ruta base.
-- **Diseño Moderno & Glassmorphism:** Paleta oscura premium con acentos dorados, tipografía Syne & DM Sans y microinteracciones en hover.
-
-### 🚀 Demo en Vivo
-
-👉 **[Ver demo en vivo en GitHub Pages](https://frankusqabant.github.io/01-testimonios/)**
-
-### 🛠️ Instalación y Uso Local
+<details>
+<summary><b>🛠️ Cómo ejecutar en local</b></summary>
 
 ```bash
-# 1. Instalar dependencias
+# Instalar dependencias
 npm install
 
-# 2. Iniciar servidor de desarrollo
+# Iniciar servidor de desarrollo
 npm run dev
 
-# 3. Compilar para producción
+# Compilar para producción
 npm run build
-
-# 4. Previsualizar compilación local
-npm run preview
 ```
+</details>
 
-### 📂 Estructura del Proyecto
+<details>
+<summary><b>📁 Estructura del proyecto</b></summary>
 
-```
+```text
 01-testimonios/
-├── .github/workflows/
-│   └── deploy.yml             # Workflow de despliegue a GitHub Pages
-├── public/
-│   ├── imagenes/              # Imágenes optimizadas en formato .webp
-│   └── vite.svg               # Favicon
+├── public/imagenes/   # Fotos en formato .webp optimizado
 ├── src/
-│   ├── componentes/
-│   │   └── Testimonio.jsx     # Componente reutilizable y accesible
-│   ├── data/
-│   │   └── testimonios.js     # Datos estructurados y desacoplados
-│   ├── App.jsx                # Lógica principal y barra de filtros
-│   ├── App.css                # Estilos de componentes y animaciones
-│   ├── index.css              # Reset y variables del tema oscuro
-│   └── main.jsx               # Punto de entrada de React
-├── index.html                 # Plantilla HTML con SEO y metadatos
-├── package.json
-└── vite.config.js             # Configuración de base path para GitHub Pages
+│   ├── App.jsx        # Componente principal y datos
+│   ├── index.css      # Estilos globales y responsive
+│   └── main.jsx       # Montaje en el DOM
+├── index.html
+└── vite.config.js
 ```
+</details>
 
 ---
 
-<div align="center">
-  <sub>Proyecto de testimonios optimizado · © 2026 Frank Abanto</sub>
-</div>
+Desarrollado por **Frank Abanto** · Proyecto de práctica frontend
